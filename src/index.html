@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="bundle.js">
+	</script>
+</head>
+<body>
+	<div ng-app="monitoringApp" ng-controller="MonitoringController">
+  		<h1>Today's Sales Chart</h1>
+  		{{displayData[0].sales}}
+  		<div linear-chart chart-data="salesData"></div>
+	</div>
+</body>
+</html>
