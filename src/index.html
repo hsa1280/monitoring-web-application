@@ -5,10 +5,9 @@
 	</script>
 </head>
 <body>
-	<div ng-app="monitoringApp" ng-controller="MonitoringController">
-  		<h1>Today's Sales Chart</h1>
-  		{{displayData[0].sales}}
-  		<div linear-chart chart-data="salesData"></div>
+	<div ng-app="chartApp" ng-controller="SalesController">
+	  	<h1>Today's Sales Chart</h1>
+	  	<div linear-chart chart-data="salesData"></div>
 	</div>
 </body>
 </html>
