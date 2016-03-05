@@ -6,9 +6,22 @@ module.exports = function(grunt) {
 					'bundle.js':['src/index.js']
 				}
 			}
-		}
+		},
+		uglify: {
+	        dist: {
+	        	options: {
+					mangle: false
+				},
+	            files: {
+	                'bundle.min.js': [
+	                    'bundle.js'
+	                ]
+	            }
+        	}
+    	}
 	});
 
 	grunt.loadNpmTasks('grunt-browserify');
-	grunt.registerTask('default', ['browserify']);
+	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.registerTask('default', ['browserify', 'uglify']);
 };
